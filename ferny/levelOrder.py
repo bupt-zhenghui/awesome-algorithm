@@ -1,13 +1,13 @@
 # leetcode 102 二叉树的层序遍历
 from utils import tree
 
+
 class Solution:
     def levelOrder(self, root):
         if not root:
             return []
         li = [root]
-        ans = []
-        ans.append([root.val])
+        ans = [[root.val]]
         while li:
             new_li = []
             for node in li:
@@ -22,6 +22,7 @@ class Solution:
                 ans.append(level_val)
             li = new_li
         return ans
+
 
 root = tree.init_binary_tree([])
 print(Solution().levelOrder(root))
