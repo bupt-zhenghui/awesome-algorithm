@@ -26,5 +26,3 @@ class Solution:
 
 root = tree.init_binary_tree([])
 print(Solution().levelOrder(root))
-aaagit
-second commit
