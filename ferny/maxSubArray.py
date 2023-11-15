@@ -1,28 +1,30 @@
 # 53. 最大子数组和
-
+#    动态规划题
 class Solution:
     def maxSubArray(self, nums):
-        posi = []
-        for i in range(len(nums)):
-            if nums[i] > 0:
-                posi.append(i)
-#         找出所有值为正的坐标
-        if not posi:
-            nums.sort()
-            return nums[-1]
-        if len(posi) == 1:
-            return nums[posi[0]]
+        if len(nums) == 1:
+            return nums[0]
+        dp = []
+        for idx, num in enumerate(nums):
+            if idx == 0:
+                dp.append(num)
+            else:
+                dp.append(max(dp[idx - 1] + num, num))
 
-        max_total = 0
-        for i, idx in enumerate(posi):
-            for j in posi[i+1:]:
-                total = sum(nums[idx:j+1])
-                max_total = max(max_total,total)
+        # dp = [0]*len(nums)
+        # 或者创建 dp 数组时要指定空间的大小
+        # for idx, num in enumerate(nums):
+        #     if idx == 0:
+        #         dp[idx] = num
+        #     else:
+        #         dp[idx] = max(dp[idx-1]+num, num)
+        # dp.sort()
+        return dp[-1]
 
-        nums.sort()
-        return max(max_total,nums[-1])
 
-print(Solution().maxSubArray([3,-3,2,-3]))
+
+
+print(Solution().maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
 
 
 
