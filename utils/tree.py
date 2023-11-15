@@ -42,8 +42,10 @@ def pre_order(node):
 
 
 def in_order(node):
-    # TODO
-    pass
+    if not node: return
+    in_order(node.left)
+    print(node.val)
+    in_order(node.right)
 
 
 def post_order(node):
