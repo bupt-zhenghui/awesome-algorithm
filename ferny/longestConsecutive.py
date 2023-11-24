@@ -9,6 +9,7 @@ class Solution:
         max_length = 1
         for i in range(len(nums)):
             if nums[i] not in dic:
+                # 说明此时 nums[i]是某个连续区间的端点
                 left = dic.get(nums[i]-1, 0)
                 right = dic.get(nums[i] + 1, 0)
                 cur = left + right + 1
