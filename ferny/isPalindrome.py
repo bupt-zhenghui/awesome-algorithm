@@ -4,9 +4,18 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def isPalindrome(self, head) -> bool:
-        nums = []
-        while head:
-            nums.append(head.val)
-            head = head.next
-        return nums == nums[::-1]
+    def hasCycle(self, head):
+        new_set = set()
+        p = head
+        if not p:
+            return False
+        new_set.add(p)
+        while p:
+            p = p.next
+            if p in new_set:
+                return True
+            else:
+                new_set.add(p)
+        return False
+
+
