@@ -3,6 +3,9 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+from ferny import arrayToLinklist
+
 class Solution:
     def mergeTwoLists(self, list1, list2):
 
@@ -35,6 +38,8 @@ class Solution:
             insert(cur1,cur2)
             return list2
 
+l1 = Solution().arrayToLinklist([1,2,4])
+l2 = arrayToLinklist([1,3,4])
 
 print(Solution().mergeTwoLists([1,2,4],[1,3,4]))
 
