@@ -25,4 +25,4 @@ def bianli(head):
         head = head.next
 
 head = arrayTolinklist([1,2,3])
-bianli(head)
+# bianli(head)
