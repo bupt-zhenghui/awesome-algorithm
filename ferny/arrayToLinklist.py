@@ -17,12 +17,12 @@ def arrayTolinklist(nums):
             tail = tail.next
         return head
 
-def bianli(head):
-    if not head:
-        return
-    while head:
-        print(head.val)
-        head = head.next
+# def bianli(head):
+#     if not head:
+#         return
+#     while head:
+#         print(head.val)
+#         head = head.next
 
 head = arrayTolinklist([1,2,3])
 # bianli(head)
