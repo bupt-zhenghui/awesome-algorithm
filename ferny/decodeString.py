@@ -37,9 +37,4 @@ class Solution:
         return stack
 
 # print(Solution().decodeString("abc3[cd]xyz"))
-
-
-
-
-
-print(Solution().decodeString("3[a2[c]]"))
+print(Solution().decodeString("10[leet]"))
