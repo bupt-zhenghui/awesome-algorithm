@@ -56,3 +56,8 @@ def post_order(node):
 def hierarchical_traversal(node):
     # TODO
     pass
+
+root = init_binary_tree([1,2,3,4])
+pre_order(root)
+print("==================")
+in_order(root)

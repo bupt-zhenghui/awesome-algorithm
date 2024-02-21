@@ -1,4 +1,4 @@
-from ferny.arrayToLinklist import arrayTolinklist
+from utils.arrayToLinklist import arrayTolinklist
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
