@@ -14,13 +14,13 @@ def arrayToBitree(arr):
         node_list_new = []
         for node in node_list:
             if i == len(arr): break
-            if arr[i]:
+            if arr[i] is not None:
                 new_node = TreeNode(arr[i])
                 node.left = new_node
                 node_list_new.append(node.left)
             i = i + 1
             if i == len(arr): break
-            if arr[i]:
+            if arr[i] is not None:
                 new_node = TreeNode(arr[i])
                 node.right = new_node
                 node_list_new.append(node.right)
